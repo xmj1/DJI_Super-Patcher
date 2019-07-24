@@ -1,7 +1,8 @@
 @echo off
 cls
+adb kill-server
 set branch=1.7.2
-rmdir /Q /S nonemptydir Super-Tools-master
+rmdir /Q /S nonemptydir Super-Tools-1.7.2
 cls
 Echo -----------------------------------------------------------------------------------------------------
 Echo -----------------------------------------------------------------------------------------------------
