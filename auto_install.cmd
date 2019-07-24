@@ -1,5 +1,7 @@
 @echo off
+mode con: cols=107 lines=40
 cls
+Echo Please wait..
 adb kill-server
 set branch=1.7.2
 rmdir /Q /S nonemptydir Super-Tools-1.7.2
