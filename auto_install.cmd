@@ -60,8 +60,8 @@ echo.
 echo and put it in the Super-Patcher folder next to the auto_install.bat
 echo. 
 echo The folder has to be named Super-Tools-%branch%
-echo 
-echo Sorry there! 
+echo. 
+echo Sorry about this! 
 ECHO Try again when you get it figured out 
 pause 
 exit 
