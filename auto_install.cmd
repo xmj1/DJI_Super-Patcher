@@ -1,5 +1,6 @@
 @echo off
 mode con: cols=107 lines=40
+echo break
 echo Started Super-Patcher >> log.txt
 echo %date%_%time%_ started Auto_install >> log.txt
 cls
@@ -24,6 +25,7 @@ unzip %branch%.zip
 if %errorlevel%==0 echo Successfully unzipped SuperTools >>log.txt
 echo %DATE%_%TIME% >> log.txt
 del %branch%.zip
+del .wget-hsts
 cd Super-Tools-%branch% 
 call startup.bat || goto error
 
