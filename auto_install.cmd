@@ -1,6 +1,6 @@
 @echo off
 mode con: cols=107 lines=40
-echo break
+echo break >> log.txt
 echo Started Super-Patcher >> log.txt
 echo %date%_%time%_ started Auto_install >> log.txt
 cls
