@@ -1,6 +1,15 @@
 @echo off
-echo This will delete all tmp files and logs which can be used to help problem solve an issue. 
+mode con: cols=107 lines=40
+ECHO WARNING! WARNING! WARNING!
+ECHO.
+echo This will delete all tmp files and log which can be used to help problem solve an issue. 
+echo.
+echo This will also delete any Flight Controllers that have been downloaded. 
+echo.
+echo This program is intended for use during development to delete tmp files after a test run 
+echo.
 echo Are you sure you want to delete all tmp files? 
+echo.
 ECHO	1) Yes, delete it all
 ECHO	2) No, keep them and exit 
 Echo.
