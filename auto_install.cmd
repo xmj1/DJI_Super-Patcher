@@ -1,11 +1,12 @@
 @echo off
 mode con: cols=107 lines=40
+echo Started Super-Patcher >> log.txt
 echo %date%_%time%_ started Auto_install >> log.txt
 cls
 Echo Please wait..
 adb kill-server
 set branch=1.7.2
-rmdir /Q /S nonemptydir Super-Tools-1.7.2
+rmdir /Q /S nonemptydir Super-Tools-%branch%
 cls
 Echo -----------------------------------------------------------------------------------------------------
 Echo -----------------------------------------------------------------------------------------------------
@@ -16,10 +17,14 @@ Echo ---------------------------------------------------------------------------
 Echo Please wait while I set things up. This wont take long...
 Timeout 5
 set SuperTools_URL=https://github.com/brett8883/Super-Tools/archive/%branch%.zip
-wget https://github.com/brett8883/Super-Tools/archive/%branch%.zip
+wget https://github.com/brett8883/Super-Tools/archive/%branch%.zip || goto error
+if %errorlevel%==0 echo Successfully downloaded SuperTools >>log.txt
+echo %DATE%_%TIME% >> log.txt
 unzip %branch%.zip
+if %errorlevel%==0 echo Successfully unzipped SuperTools >>log.txt
+echo %DATE%_%TIME% >> log.txt
 del %branch%.zip
-cd Super-Tools-%branch%
+cd Super-Tools-%branch% 
 call startup.bat || goto error
 
 :Error
