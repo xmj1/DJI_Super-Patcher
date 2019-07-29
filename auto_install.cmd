@@ -27,7 +27,7 @@ echo %DATE%_%TIME% >> log.txt
 del %branch%.zip
 del .wget-hsts
 cd Super-Tools-%branch% 
-call startup.bat || goto error
+call startup.bat
 
 :Error
 cls
